@@ -18,7 +18,7 @@ export default {
       options: [
         {
           value: 'state',
-          label: '美国各州确诊/死亡/死亡率地图统计'
+          label: '各州确诊/死亡/死亡率地图统计'
         },
         {
           value: 'dayCasesDeaths',
@@ -42,15 +42,15 @@ export default {
   methods: {
     jumpPage() {
       if (this.value === 'state') {
-        window.location.href = 'http://localhost:3000/state';
+        this.$router.push('/');
       } else if (this.value === 'dayCasesDeaths') {
-        window.location.href = 'http://localhost:3000/dayCasesDeaths';
+        this.$router.push('/dayCasesDeaths');
       } else if (this.value === 'dayAddCasesDeaths') {
-        window.location.href = 'http://localhost:3000/dayAddCasesDeaths';
+        this.$router.push('/dayAddCasesDeaths');
       } else if (this.value === 'top10LeastCases') {
-        window.location.href = 'http://localhost:3000/top10LeastCases';
+        this.$router.push('/top10LeastCases');
       } else if (this.value === 'top10LeastDeaths') {
-        window.location.href = 'http://localhost:3000/top10LeastDeaths';
+        this.$router.push('/top10LeastDeaths');
       }
       this.$forceUpdate();
     }

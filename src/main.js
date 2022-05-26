@@ -8,10 +8,6 @@ import axios from 'axios'
 import VueAxios from "vue-axios";
 //引入echarts
 import ECharts from 'vue-echarts'
-// import ECharts modules manually to reduce bundle size
-import {CanvasRenderer} from 'echarts/renderers'
-import {BarChart} from 'echarts/charts'
-import {GridComponent, TooltipComponent} from 'echarts/components'
 //引入路由
 import router from './router/router'
 
