@@ -28,7 +28,7 @@ Spark SQL 数据分析
 
 **项目演示：**
 
-[http://spark.znzzi.com/](http://spark.znzzi.com/)
+[spark.znzzi.com](http://spark.znzzi.com/)
 
 懒得截图了，进去看吧，
 
