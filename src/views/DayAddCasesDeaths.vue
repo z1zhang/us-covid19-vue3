@@ -29,20 +29,12 @@ import {
   CategoryScale,
 } from 'chart.js'
 
-ChartJS.register(
-    Title,
-    Tooltip,
-    Legend,
-    LineElement,
-    LinearScale,
-    PointElement,
-    CategoryScale
-)
+ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale)
+
 export default {
-  name: "DayAddCasesDeaths",
+  name: 'DayAddCasesDeaths',
   components: {Line},
   props: {
-    //平滑曲线
     chartId: {
       type: String,
       default: 'line-chart'
@@ -87,8 +79,8 @@ export default {
     }
   },
   methods: {
-    query() {
-      this.axios.post("api/dayAddCases").then(res => {
+    getAddDayCasesDeaths() {
+      this.axios.post("api/dayAddCasesDeaths").then(res => {
         if (res.data.status === 200) {
           const json = JSON.stringify(res.data.data)
           //将date的值存入chartData.labels数组
@@ -96,36 +88,39 @@ export default {
           // 将addCases的值存入chartData.datasets数组
           this.chartData.datasets[0] = {
             label: '新增确诊',
-            data: JSON.parse(json).map(item => item.variation),
+            data: JSON.parse(json).map(item => item.casesVariation),
             backgroundColor: 'rgb(255,221,99)',
             borderColor: 'rgb(255,221,99)',
             borderWidth: 1,
           }
-        } else {
-          this.nullData = true
-        }
-      })
-      this.axios.post("api/dayAddDeaths").then(res => {
-        if ((res.data.status === 200)) {
-          const json = JSON.stringify(res.data.data)
-          //将date的值存入chartData.labels数组
-          this.chartData.labels = JSON.parse(json).map(item => item.date)
-          // 将addCases的值存入chartData.datasets数组
           this.chartData.datasets[1] = {
             label: '新增死亡',
-            data: JSON.parse(json).map(item => item.variation),
+            data: JSON.parse(json).map(item => item.deathsVariation),
             backgroundColor: 'rgb(255,0,0)',
             borderColor: 'rgb(255,0,0)',
             borderWidth: 1
           }
-        } else {
-          this.nullData = true
         }
       })
+      // this.axios.post("api/dayAddDeaths").then(res => {
+      //   if ((res.data.status === 200)) {
+      //     const json = JSON.stringify(res.data.data)
+      //     //将date的值存入chartData.labels数组
+      //     this.chartData.labels = JSON.parse(json).map(item => item.date)
+      //     // 将addCases的值存入chartData.datasets数组
+      //     this.chartData.datasets[1] = {
+      //       label: '新增死亡',
+      //       data: JSON.parse(json).map(item => item.variation),
+      //       backgroundColor: 'rgb(255,0,0)',
+      //       borderColor: 'rgb(255,0,0)',
+      //       borderWidth: 1
+      //     }
+      //   }
+      // })
     }
   },
-  mounted() {
-    this.query()
+  created() {
+    this.getAddDayCasesDeaths()
   }
 }
 </script>
