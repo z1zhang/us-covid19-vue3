@@ -102,21 +102,6 @@ export default {
           }
         }
       })
-      // this.axios.post("api/dayAddDeaths").then(res => {
-      //   if ((res.data.status === 200)) {
-      //     const json = JSON.stringify(res.data.data)
-      //     //将date的值存入chartData.labels数组
-      //     this.chartData.labels = JSON.parse(json).map(item => item.date)
-      //     // 将addCases的值存入chartData.datasets数组
-      //     this.chartData.datasets[1] = {
-      //       label: '新增死亡',
-      //       data: JSON.parse(json).map(item => item.variation),
-      //       backgroundColor: 'rgb(255,0,0)',
-      //       borderColor: 'rgb(255,0,0)',
-      //       borderWidth: 1
-      //     }
-      //   }
-      // })
     }
   },
   created() {
