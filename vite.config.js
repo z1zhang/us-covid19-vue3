@@ -13,7 +13,7 @@ export default defineConfig({
         proxy: {
             '/api': {
                 // 后台地址
-                target: 'http://localhost:8080',
+                target: 'http://39.101.78.202:8080',
                 // changeOrigin设置为true时，服务器收到的请求头的host与服务器地址相同
                 // changeOrigin设置为false时，服务器收到的请求头的host与前端地址相同
                 changeOrigin: true,//开启代理
