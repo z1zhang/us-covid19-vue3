@@ -34,12 +34,7 @@ const routes = [
     {
         path: '/state/:county',
         component: () => import('../views/County.vue')
-    },
-    {
-        path: '/test',
-        component: () => import('../components/Top10Cases.vue')
-    },
-
+    }
 ]
 
 const router = createRouter({

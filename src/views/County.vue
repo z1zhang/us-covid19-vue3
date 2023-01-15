@@ -75,7 +75,6 @@ export default {
     getCounty() {
       this.axios.post("/api/countyCasesDeaths", this.state).then(res => {
         if (res.data.status === 200) {
-          console.log(res.data)
           this.loading = false
           const json = JSON.stringify(res.data.data)
           this.chartData.labels = JSON.parse(json).map(item => item.county)
