@@ -6,7 +6,7 @@ module.exports = (req, res) => {
     let target = ''
 
     if (req.url.startsWith('/api')) {
-        target = 'http://39.101.78.202:8080'
+        target = 'http://localhost:8080'
     }
     createProxyMiddleware({
         target,
