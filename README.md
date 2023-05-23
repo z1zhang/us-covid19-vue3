@@ -18,11 +18,11 @@ Spark SQL 数据分析
 
 可视化部分是前后端分离实现的
 
-前端使用Vue3 + ECharts
+前端 Vue3 + ECharts
 
 仓库地址：[https://github.com/z1zhang/us-covid19-vue3](https://github.com/z1zhang/us-covid19-vue3)
 
-后端使用Spring Boot + MyBatis Plus（MyBatis Plus也只是导了包，但没用上，因为全是查询）
+后端 Spring Boot + MyBatis Plus
 
 仓库地址：[https://github.com/z1zhang/us-covid19-springboot](https://github.com/z1zhang/us-covid19-springboot)
 
@@ -30,16 +30,11 @@ Spark SQL 数据分析
 
 [spark.znzzi.com](http://spark.znzzi.com/)
 
-懒得截图了，进去看吧，
 
-⚠️每日增长的折线图有点小bug，加载可能会404，感兴趣的可以尝试修复一下
-
-
-还有很多可以完善的地方比如
-
-下钻到县地图（没做是因为没有找到完整的json地图文件，要复习所以不想在实训上浪费太多时间）
-
-替换掉人数最少的词云图，因为词云图一般都是按照多的显示，时间紧也没有改，等等
+后期计划：
+实现下钻到县级地图
+为图表添加DataZoom
+...
 
 有兴趣可以尝试一下
 
