@@ -16,9 +16,8 @@ export default {
     }
   },
   created() {
-    this.axios.post("api/top10LeastCases").then(res => {
+    this.axios.post("/api/top10LeastCases").then(res => {
       if (res.data.status === 200) {
-        const json = JSON.stringify(res.data.data)
         for (let i = 0; i < 10; i++) {
           const person = {name: res.data.data[i].state, value: res.data.data[i].cases};
           this.wordData.push(person);

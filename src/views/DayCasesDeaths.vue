@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     getDayCasesDeaths() {
-      this.axios.post("api/dayCasesDeaths").then(res => {
+      this.axios.post("/api/dayCasesDeaths").then(res => {
         if ((res.data.status === 200)) {
           const json = JSON.stringify(res.data.data)
           //将date的值存入chartData.labels数组

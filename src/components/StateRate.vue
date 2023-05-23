@@ -54,7 +54,7 @@ export default {
     queryData: function () {
       this.loading = true;
       this.stateData = [];
-      this.axios.post("api/deathRate").then(res => {
+      this.axios.post("/api/deathRate").then(res => {
         if (res.data.status === 200) {
           this.loading = false
           for (let i = 0; i < 56; i++) {

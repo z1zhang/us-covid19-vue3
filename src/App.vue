@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-  name: "DeathRate",
+  name: "App",
   data() {
     return {
       value: '',
@@ -42,7 +42,7 @@ export default {
   methods: {
     jumpPage() {
       if (this.value === 'state') {
-        this.$router.push('/');
+        this.$router.push('/state');
       } else if (this.value === 'dayCasesDeaths') {
         this.$router.push('/dayCasesDeaths');
       } else if (this.value === 'dayAddCasesDeaths') {
@@ -58,7 +58,7 @@ export default {
 }
 </script>
 <style>
-body .el-table th.gutter {
+body .el-table th {
   display: table-cell !important;
 }
 </style>

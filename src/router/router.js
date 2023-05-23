@@ -2,6 +2,10 @@ import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
     {
+        path: '/',
+        redirect: '/state'
+    },
+    {
         path: '/dayCasesDeaths',
         name: 'DayCasesDeaths',
         component: () => import('../views/DayCasesDeaths.vue')
@@ -27,7 +31,7 @@ const routes = [
         component: () => import('../views/Top10LeastDeaths.vue')
     },
     {
-        path: '/',
+        path: '/state',
         name: 'State',
         component: () => import('../views/State.vue')
     },

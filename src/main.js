@@ -10,6 +10,8 @@ import VueAxios from "vue-axios";
 import ECharts from 'vue-echarts'
 //引入路由
 import router from './router/router'
+//引入mock，不需要mock时注释掉
+import "../mock/index";
 
 const app = createApp(App)
 app.use(ElementPlus)

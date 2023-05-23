@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     getLeastCases() {
-      this.axios.post("api/top10DeathRate").then(res => {
+      this.axios.post("/api/top10DeathRate").then(res => {
         if ((res.data.status === 200)) {
           const json = JSON.stringify(res.data.data)
           this.rankData.labels = JSON.parse(json).map(item => item.state)

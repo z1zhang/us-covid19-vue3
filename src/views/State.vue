@@ -36,7 +36,7 @@ export default {
     }
   },
   created() {
-    this.axios.post("api/deathRate").then(res => {
+    this.axios.post("/api/deathRate").then(res => {
       if (res.data.status === 200) {
         const totalData = {
           name: "全美",

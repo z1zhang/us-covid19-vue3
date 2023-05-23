@@ -16,7 +16,7 @@ export default {
     }
   },
   created() {
-    this.axios.post("api/top10LeastDeaths").then(res => {
+    this.axios.post("/api/top10LeastDeaths").then(res => {
       if (res.data.status === 200) {
         for (let i = 0; i < 10; i++) {
           const person = {name: res.data.data[i].state, value: res.data.data[i].cases};
